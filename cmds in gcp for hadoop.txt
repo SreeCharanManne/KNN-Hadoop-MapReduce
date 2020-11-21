@@ -1,0 +1,6 @@
+student-01-e4c7359bd0d0@cluster-394c-m:~$ hdfs dfs -mkdir /datafolder/
+student-01-e4c7359bd0d0@cluster-394c-m:~$ hdfs dfs -put input.txt /datafolder/
+student-01-e4c7359bd0d0@cluster-394c-m:~$ hdfs dfs -put train.txt /datafolder/
+student-01-e4c7359bd0d0@cluster-394c-m:~$ hadoop jar knn.jar knn /datafolder/input.txt /datafolder/train.txt /tmp/result/
+student-01-e4c7359bd0d0@cluster-394c-m:~$ hdfs dfs -ls /tmp/result/
+student-01-e4c7359bd0d0@cluster-394c-m:~$ hdfs dfs -get /tmp/result* /tmp/result/ .
